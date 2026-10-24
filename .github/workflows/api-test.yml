@@ -1,0 +1,6 @@
+- name: Run GoRest API Collection
+  run: |
+    newman run 2373401012853_ChuThuanThanh_Lab05_GoRest.postman_collection.json \
+      -e 2373401012853_ChuThuanThanh_GoRest_Env.postman_environment.json \
+      -d users.csv \
+      --env-var "token=${{ secrets.GOREST_TOKEN }}"
